@@ -1,0 +1,102 @@
+body {
+    font-family: "Inter", sans-serif;
+    background: linear-gradient(135deg, #1a0533 0%, #0a1a3a 50%, #002b2b 100%);
+    background-attachment: fixed;   /* the gradient stays in place when scrolling */
+    min-height: 100vh;
+
+    /* Dash 4 components (dropdown, date picker) take their colours from these variables */
+    --Dash-Fill-Inverse-Strong: #1b1f24;            /* popup / input background */
+    --Dash-Text-Strong: #f2f5fa;
+    --Dash-Text-Primary: #e6e9ef;
+    --Dash-Text-Weak: rgba(255, 255, 255, 0.6);
+    --Dash-Text-Disabled: rgba(255, 255, 255, 0.3);
+    --Dash-Stroke-Strong: rgba(255, 255, 255, 0.25);
+    --Dash-Stroke-Weak: rgba(255, 255, 255, 0.1);
+    --Dash-Fill-Interactive-Strong: #00E5A8;        /* selected day = accent colour */
+    --Dash-Fill-Interactive-Weak: rgba(0, 229, 168, 0.15);
+    --Dash-Fill-Primary-Hover: rgba(255, 255, 255, 0.08);
+    --Dash-Fill-Primary-Active: rgba(255, 255, 255, 0.14);
+    --Dash-Fill-Disabled: rgba(255, 255, 255, 0.08);
+}
+
+.app-header {
+    padding: 2rem 0 1.5rem 0;
+}
+
+.app-title {
+    font-size: 4rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+    background: linear-gradient(90deg, #00E5A8, #5B8DEF);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.app-subtitle {
+    opacity: 0.7;
+}
+
+/* glass cards with a neon glow */
+.filter-card,
+.graph-card,
+.kpi-card {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(0, 229, 168, 0.6);
+    border-radius: 16px;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 0 25px rgba(0, 229, 168, 0.35);
+}
+
+/* keep the filters (and the calendar popup inside them) above the charts */
+.filter-card {
+    position: relative;
+    z-index: 10;
+}
+
+.kpi-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.kpi-card:hover {
+    transform: translateY(-10px) scale(1.06);
+    box-shadow: 0 15px 40px rgba(0, 229, 168, 0.6);
+}
+
+.graph-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.graph-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 40px rgba(91, 141, 239, 0.5);
+}
+
+.kpi-title {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    opacity: 0.7;
+}
+
+.kpi-value {
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.kpi-unit {
+    font-size: 1rem;
+    opacity: 0.6;
+}
+
+label {
+    font-weight: 600;
+    margin-top: 0.5rem;
+}
+
+.app-footer {
+    text-align: center;
+    opacity: 0.5;
+    padding: 2rem 0;
+}
